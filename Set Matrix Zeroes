@@ -1,0 +1,22 @@
+class Solution {
+    public void setZeroes(int[][] m) {
+        int r= m.length, c = m[0].length;
+        boolean[] x = new boolean[r], y = new boolean[c];
+        for(int i=0;i<r;i++){
+            for(int j =0;j<c;j++){
+                if(m[i][j]==0){
+                    x[i]=true;
+                    y[j]=true; 
+                }
+            }
+        }
+        for(int i=0;i<r;i++){
+            for(int j =0;j<c;j++){
+                if(x[i]||y[j]){
+                    m[i][j]=0;
+                }
+            }
+        }
+
+    }
+}
