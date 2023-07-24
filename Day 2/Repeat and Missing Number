@@ -1,0 +1,46 @@
+import java.util.Arrays;
+
+public class Solution {
+
+    public static int[] findMissingRepeatingNumbers(int []a) {
+
+        // Write your code here
+
+        long n=a.length;
+
+        long sx=(n*(n+1))/2;
+
+        long s=0;
+
+        long ss=0;
+
+        for(long i:a){
+
+            s+=i;
+
+            ss+=i*i;
+
+        }
+
+        long e1=(s-sx);
+
+        long val=(n*(n+1)*(2*n+1))/6;
+
+        long e2=(ss-val);
+
+        e2=(ss-val);
+
+        e2=e2/e1;
+
+        long x=(e1+e2)/2;
+
+        long y=x-e1;
+
+        int ans[]={(int)x,(int)y};
+
+        return ans;
+
+    }
+
+}
+
